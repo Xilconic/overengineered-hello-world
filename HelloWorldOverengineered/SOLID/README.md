@@ -24,3 +24,14 @@ and that should be it's only responsibility.
 Extract methods for each responsibility.
 #### Consequences
 Each function in the program now has 1 reason, and only 1 reason, to change.
+
+### 0002 - Move formatting responsibilities out of GetText function
+#### Status
+Implemented
+#### Context
+The `GetText` function is implemented in a way that contains both the raw text to be displayed as well as some formatting business rules.
+The formatting business rules should be moved out of `GetText` and into `FormatText`.
+#### Decision
+Implicit formatting business rules should be extracted from the hard-coded text in `GetText`, and moved into `FormatText`.
+#### Consequences
+`GetText` implementation is now purely about determining the text that needs to be displayed.
