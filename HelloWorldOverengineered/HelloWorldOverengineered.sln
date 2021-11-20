@@ -2,6 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateHelloWorld", "TemplateHelloWorld\TemplateHelloWorld.csproj", "{8BE00DA4-1618-4DDF-A649-3A855F664BAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{96C5F47A-C942-4ED8-92FF-29412D4B52E9}"
+ProjectSection(SolutionItems) = preProject
+	SOLID\README.md = SOLID\README.md
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_HelloWorld", "SOLID\SOLID_HelloWorld\SOLID_HelloWorld.csproj", "{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +19,12 @@ Global
 		{8BE00DA4-1618-4DDF-A649-3A855F664BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE00DA4-1618-4DDF-A649-3A855F664BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE00DA4-1618-4DDF-A649-3A855F664BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC} = {96C5F47A-C942-4ED8-92FF-29412D4B52E9}
 	EndGlobalSection
 EndGlobal
