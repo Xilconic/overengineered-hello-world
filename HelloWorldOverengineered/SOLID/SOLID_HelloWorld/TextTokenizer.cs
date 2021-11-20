@@ -2,16 +2,14 @@
 {
     internal class TextTokenizer
     {
-        private readonly string _separator = " ";
+        private readonly string _separator;
 
-        public string[] Tokenize(string text)
+        public TextTokenizer(string separator)
         {
-            return text.Split(_separator);
+            _separator = separator;
         }
-        
-        public string CombineTokens(string[] tokens)
-        {
-            return string.Join(_separator, tokens);
-        }
+
+        public string[] Tokenize(string text) => text.Split(_separator);
+        public string CombineTokens(string[] tokens) => string.Join(_separator, tokens);
     }
 }

@@ -57,3 +57,14 @@ It's clear that these are intentionally coupled because of the concept they shar
 Extract class for dealing with sentences.
 #### Consequences
 This encapsulated the dependency on the business logic into a new class, splitting that off from `Program`.
+
+### 0005 - Define class for formatting the text
+#### Status
+Implemented
+#### Context
+`Program` contains a lot of methods related to formatting. 
+Also the dependency on `TextTokenizer` only is needed within the context for formatting, while irrelevant for determining which text to visualize or how to visualize it.
+#### Decision
+Extract class for formatting text.
+#### Consequences
+This will help localize the scope of certain objects to when they are relevant (and when no longer).
