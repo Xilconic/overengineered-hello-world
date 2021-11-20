@@ -18,17 +18,45 @@ namespace SOLID_HelloWorld
         
         private static string FormatText(string text)
         {
-            string[] separateWordsInText = text.Split(" ");
-            for (int i = 0; i < separateWordsInText.Length; i++)
-            {
-                char firstCharacter = separateWordsInText[i][0];
-                string remainder = separateWordsInText[i][1..];
-                string wordWithFirstCharacterCapitalized = firstCharacter.ToString().ToUpper() + remainder;
-                separateWordsInText[i] = wordWithFirstCharacterCapitalized;
-            }
-            return string.Join(" ", separateWordsInText)+"!";
+            string[] separateWordsInText = GetWordsFromText(text);
+            CapitalizeFirstCharacterOfEachWork(separateWordsInText);
+
+            string textWithFirstCharactersOfEachWordCapitalized = CombineWordsIntoSentence(separateWordsInText);
+            return PostFixWithExclamationMark(textWithFirstCharactersOfEachWordCapitalized);
+        }
+
+        private static string[] GetWordsFromText(string text)
+        {
+            return text.Split(" ");
         }
         
+        private static void CapitalizeFirstCharacterOfEachWork(string[] words)
+        {
+            for (int i = 0; i < words.Length; i++)
+            {
+                var wordWithFirstCharacterCapitalized = CapitalizeFirstCharacter(words[i]);
+                words[i] = wordWithFirstCharacterCapitalized;
+            }
+        }
+
+        private static string CapitalizeFirstCharacter(string word)
+        {
+            char firstCharacter = word[0];
+            string remainder = word[1..];
+            return firstCharacter.ToString().ToUpper() + remainder;
+        }
+        
+        private static string CombineWordsIntoSentence(string[] separateWordsInText)
+        {
+            var textWithFirstCharactersOfEachWordCapitalized = string.Join(" ", separateWordsInText);
+            return textWithFirstCharactersOfEachWordCapitalized;
+        }
+        
+        private static string PostFixWithExclamationMark(string textWithFirstCharactersOfEachWordCapitalized)
+        {
+            return textWithFirstCharactersOfEachWordCapitalized+"!";
+        }
+
         private static void OutputText(string formattedText)
         {
             Console.WriteLine(formattedText);

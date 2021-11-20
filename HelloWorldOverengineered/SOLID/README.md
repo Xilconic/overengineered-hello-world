@@ -35,3 +35,14 @@ The formatting business rules should be moved out of `GetText` and into `FormatT
 Implicit formatting business rules should be extracted from the hard-coded text in `GetText`, and moved into `FormatText`.
 #### Consequences
 `GetText` implementation is now purely about determining the text that needs to be displayed.
+
+### 0003 - Extract methods for responsibilities in FormatText
+#### Status
+Implemented
+#### Context
+The `FormatText` function has code responsible for different behaviors.
+#### Decision
+Extract methods for each separate behavior in `FormatText` such that `FormatText` only has the responsibility of aggregating the individual operations.
+Each operation should be it's own method.
+#### Consequences
+`FormatText` implementation has it's behaviors better separated out.
