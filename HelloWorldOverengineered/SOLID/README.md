@@ -68,3 +68,14 @@ Also the dependency on `TextTokenizer` only is needed within the context for for
 Extract class for formatting text.
 #### Consequences
 This will help localize the scope of certain objects to when they are relevant (and when no longer).
+
+### 0006 - Define classes for text determination and outputting the text
+#### Status
+Implemented
+#### Context
+The extraction of the `TextFormatter` class cleaned up and localized the responsibilities into a single class.
+We don't seem to have that for determining which text to be shown, nor for outputting the formatted text.
+#### Decision
+Extract classes for the 2 other concepts currently captured by `Program.GetText` and `Program.OutputText`.
+#### Consequences
+This will further help localize the scope of certain objects to when they are relevant (and when no longer).
