@@ -6,7 +6,24 @@ namespace SOLID_HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string text = GetText();
+            string formattedText = FormatText(text);
+            OutputText(formattedText);
+        }
+
+        private static string GetText()
+        {
+            return "Hello World!";
+        }
+        
+        private static string FormatText(string text)
+        {
+            return text;
+        }
+        
+        private static void OutputText(string formattedText)
+        {
+            Console.WriteLine(formattedText);
         }
     }
 }
