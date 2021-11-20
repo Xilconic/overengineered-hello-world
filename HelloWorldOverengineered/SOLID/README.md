@@ -46,3 +46,14 @@ Extract methods for each separate behavior in `FormatText` such that `FormatText
 Each operation should be it's own method.
 #### Consequences
 `FormatText` implementation has it's behaviors better separated out.
+
+### 0004 - Define class for dealing with sentences
+#### Status
+Implemented
+#### Context
+`Program.GetWordsFromText` and `Program.CombineWordsIntoSentence` both contain the magic value of `" "`.
+It's clear that these are intentionally coupled because of the concept they share.
+#### Decision
+Extract class for dealing with sentences.
+#### Consequences
+This encapsulated the dependency on the business logic into a new class, splitting that off from `Program`.

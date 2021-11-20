@@ -27,7 +27,7 @@ namespace SOLID_HelloWorld
 
         private static string[] GetWordsFromText(string text)
         {
-            return text.Split(" ");
+            return new TextTokenizer().Tokenize(text);
         }
         
         private static void CapitalizeFirstCharacterOfEachWork(string[] words)
@@ -48,8 +48,7 @@ namespace SOLID_HelloWorld
         
         private static string CombineWordsIntoSentence(string[] separateWordsInText)
         {
-            var textWithFirstCharactersOfEachWordCapitalized = string.Join(" ", separateWordsInText);
-            return textWithFirstCharactersOfEachWordCapitalized;
+            return new TextTokenizer().CombineTokens(separateWordsInText);
         }
         
         private static string PostFixWithExclamationMark(string textWithFirstCharactersOfEachWordCapitalized)
