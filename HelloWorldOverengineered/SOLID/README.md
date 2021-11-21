@@ -90,3 +90,13 @@ This should be avoided with Dependency Inversion Principle in mind.
 Define an interface for `TextTokenizer` and have `TextFormatter` depend on it.
 #### Consequences
 This makes sure all dependencies are properly aligned.
+
+### 0007 - Segregate interfaces for ITextTokenizer
+#### Status
+Implemented
+#### Context
+The `ITextTokenizer` exposes 2 methods, which maybe not all callers will need in the future.
+#### Decision
+Apply Interface Segregation Principle to define separate interfaces for tokenizing versus recombination. 
+#### Consequences
+This design allows callers to only depend on the behavior they actually use.

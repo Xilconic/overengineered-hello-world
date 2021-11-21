@@ -1,6 +1,6 @@
 ﻿namespace SOLID_HelloWorld
 {
-    internal class TextTokenizer : ITextTokenizer
+    internal class TextTokenizer : ITokenCombinator, ITextSplitter
     {
         private readonly string _separator;
 

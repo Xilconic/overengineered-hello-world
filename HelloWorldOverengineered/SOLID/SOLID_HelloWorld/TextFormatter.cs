@@ -2,11 +2,13 @@
 {
     internal class TextFormatter
     {
-        private readonly ITextTokenizer _textTokenizer;
+        private readonly ITokenCombinator _tokenCombinator;
+        private readonly ITextSplitter _textSplitter;
 
-        public TextFormatter(ITextTokenizer tokenizer)
+        public TextFormatter(ITokenCombinator tokenizer, ITextSplitter splitter)
         {
-            _textTokenizer = tokenizer;
+            _tokenCombinator = tokenizer;
+            _textSplitter = splitter;
         }
 
         public string FormatText(string text)
@@ -18,8 +20,8 @@
             return PostFixWithExclamationMark(textWithFirstCharactersOfEachWordCapitalized);
         }
 
-        private string[] GetWordsFromText(string text) => _textTokenizer.Tokenize(text);
-        private string CombineWordsIntoSentence(string[] separateWordsInText) => _textTokenizer.CombineTokens(separateWordsInText);
+        private string[] GetWordsFromText(string text) => _textSplitter.Tokenize(text);
+        private string CombineWordsIntoSentence(string[] separateWordsInText) => _tokenCombinator.CombineTokens(separateWordsInText);
 
         private static void CapitalizeFirstCharacterOfEachWork(string[] words)
         {

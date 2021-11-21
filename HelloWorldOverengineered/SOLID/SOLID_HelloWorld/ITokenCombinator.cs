@@ -1,8 +1,7 @@
 ﻿namespace SOLID_HelloWorld
 {
-    internal interface ITextTokenizer
+    internal interface ITokenCombinator
     {
-        string[] Tokenize(string text);
         string CombineTokens(string[] tokens);
     }
 }
