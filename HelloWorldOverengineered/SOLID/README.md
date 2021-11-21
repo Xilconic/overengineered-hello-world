@@ -79,3 +79,14 @@ We don't seem to have that for determining which text to be shown, nor for outpu
 Extract classes for the 2 other concepts currently captured by `Program.GetText` and `Program.OutputText`.
 #### Consequences
 This will further help localize the scope of certain objects to when they are relevant (and when no longer).
+
+### 0007 - Inverse dependency on TextTokenizer
+#### Status
+Implemented
+#### Context
+The `TextFormatter` class has a concrete dependency on `TextTokenizer`.
+This should be avoided with Dependency Inversion Principle in mind.
+#### Decision
+Define an interface for `TextTokenizer` and have `TextFormatter` depend on it.
+#### Consequences
+This makes sure all dependencies are properly aligned.

@@ -2,8 +2,9 @@
 {
     class Program
     {
+        private static readonly TextTokenizer Tokenizer = new(" ");
         private static readonly TextDeterminator TextDeterminator = new();
-        private static readonly TextFormatter TextFormatter = new();
+        private static readonly TextFormatter TextFormatter = new(Tokenizer);
         private static readonly TextOutputter TextOutputter = new();
 
         static void Main(string[] args)

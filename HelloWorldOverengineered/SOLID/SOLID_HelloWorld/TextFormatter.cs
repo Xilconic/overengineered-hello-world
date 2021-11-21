@@ -2,11 +2,11 @@
 {
     internal class TextFormatter
     {
-        private readonly TextTokenizer _textTokenizer;
+        private readonly ITextTokenizer _textTokenizer;
 
-        public TextFormatter()
+        public TextFormatter(ITextTokenizer tokenizer)
         {
-            _textTokenizer = new TextTokenizer(" ");
+            _textTokenizer = tokenizer;
         }
 
         public string FormatText(string text)
