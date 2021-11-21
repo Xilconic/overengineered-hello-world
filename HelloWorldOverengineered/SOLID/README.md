@@ -100,3 +100,25 @@ The `ITextTokenizer` exposes 2 methods, which maybe not all callers will need in
 Apply Interface Segregation Principle to define separate interfaces for tokenizing versus recombination. 
 #### Consequences
 This design allows callers to only depend on the behavior they actually use.
+
+### 0007 - Segregate interfaces for ITextTokenizer
+#### Status
+Implemented
+#### Context
+The `ITextTokenizer` exposes 2 methods, which maybe not all callers will need in the future.
+#### Decision
+Apply Interface Segregation Principle to define separate interfaces for tokenizing versus recombination.
+#### Consequences
+This design allows callers to only depend on the behavior they actually use.
+
+### 0008 - Introduce polymorphic sentence termination
+#### Status
+Implemented
+#### Context
+If the client would like a different way of how the displayed sentence is terminated,
+the `TextFormatter` class needs to be changed for it. The violated the Open/Close Principle.
+#### Decision
+Allow for polymorphic alternatives to the current implementation, such that the behavior of `TextFormatter`
+can be changed without it needing to be recompiled.
+#### Consequences
+Improves the changeability of `TextFormatter`.

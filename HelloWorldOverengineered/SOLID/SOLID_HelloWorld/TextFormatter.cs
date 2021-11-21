@@ -4,11 +4,16 @@
     {
         private readonly ITokenCombinator _tokenCombinator;
         private readonly ITextSplitter _textSplitter;
+        private readonly ITextPostFixer _textPostFixer;
 
-        public TextFormatter(ITokenCombinator tokenizer, ITextSplitter splitter)
+        public TextFormatter(
+            ITokenCombinator tokenizer,
+            ITextSplitter splitter,
+            ITextPostFixer textPostFixer)
         {
             _tokenCombinator = tokenizer;
             _textSplitter = splitter;
+            _textPostFixer = textPostFixer;
         }
 
         public string FormatText(string text)
@@ -39,9 +44,9 @@
             return firstCharacter.ToString().ToUpper() + remainder;
         }
         
-        private static string PostFixWithExclamationMark(string textWithFirstCharactersOfEachWordCapitalized)
+        private string PostFixWithExclamationMark(string textWithFirstCharactersOfEachWordCapitalized)
         {
-            return textWithFirstCharactersOfEachWordCapitalized+"!";
+            return _textPostFixer.PostfixText(textWithFirstCharactersOfEachWordCapitalized, "!");
         }
     }
 }
