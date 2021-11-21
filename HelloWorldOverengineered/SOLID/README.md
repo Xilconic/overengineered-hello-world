@@ -122,3 +122,13 @@ Allow for polymorphic alternatives to the current implementation, such that the 
 can be changed without it needing to be recompiled.
 #### Consequences
 Improves the changeability of `TextFormatter`.
+
+### 0009 - Proof of polymorphic implementations
+#### Status
+Implemented
+#### Context
+The client is afraid that developers are adding feature that don't add value and doubts that our polymorphic implementation is worth it.
+#### Decision
+From this point on, all designs for the intent of polymorphism should have at least 1 alternative to demonstrate it's working.
+#### Consequences
+Increase confidence by client in the code. Also serves as documentation of intent towards future developers.
