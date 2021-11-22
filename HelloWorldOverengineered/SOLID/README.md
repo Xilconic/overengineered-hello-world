@@ -132,3 +132,13 @@ The client is afraid that developers are adding feature that don't add value and
 From this point on, all designs for the intent of polymorphism should have at least 1 alternative to demonstrate it's working.
 #### Consequences
 Increase confidence by client in the code. Also serves as documentation of intent towards future developers.
+
+### 0010 - Segregate used interface of Random
+#### Status
+Implemented
+#### Context
+The `Random` class exposes many behaviors that we don't use in our application.
+#### Decision
+Define a interface that only exposes the behaviors of `Random` that we need to depend on, abstracting away all else.
+#### Consequences
+This isolates the application from possible changes to the `Random` class.
