@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace SOLID_HelloWorld
+namespace SOLID_HelloWorld.Formatting
 {
     internal class StringBuilderPostFixer : ITextPostFixer
     {

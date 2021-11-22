@@ -1,4 +1,4 @@
-﻿namespace SOLID_HelloWorld
+﻿namespace SOLID_HelloWorld.TextSourcing
 {
     internal class TextDeterminator
     {

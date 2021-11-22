@@ -1,4 +1,6 @@
-﻿namespace SOLID_HelloWorld
+﻿using SOLID_HelloWorld.Formatting.TextTokenization;
+
+namespace SOLID_HelloWorld.Formatting
 {
     internal class TextFormatter
     {

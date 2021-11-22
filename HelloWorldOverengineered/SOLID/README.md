@@ -142,3 +142,13 @@ The `Random` class exposes many behaviors that we don't use in our application.
 Define a interface that only exposes the behaviors of `Random` that we need to depend on, abstracting away all else.
 #### Consequences
 This isolates the application from possible changes to the `Random` class.
+
+### 0011 - Improve namespacing and source code organization
+#### Status
+Implemented
+#### Context
+The project file is starting to grow and the structure is getting lost. Relationships between files is not immediately apparent.
+#### Decision
+Organize the code in namespaces and folders according to their responsibilities.
+#### Consequences
+Code will be easier to navigate and cluster based on intent. If needed, makes it easier to extract separate dll for them.

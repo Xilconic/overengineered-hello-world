@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SOLID_HelloWorld
+namespace SOLID_HelloWorld.Utilities
 {
     internal class RandomIntegerProvider
     {
