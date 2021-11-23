@@ -1,4 +1,5 @@
-﻿using SOLID_HelloWorld.Formatting.TextTokenization;
+﻿using SOLID_HelloWorld.Formatting.TextPostfixing;
+using SOLID_HelloWorld.Formatting.TextTokenization;
 
 namespace SOLID_HelloWorld.Formatting
 {

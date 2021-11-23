@@ -1,4 +1,4 @@
-﻿namespace SOLID_HelloWorld.Formatting
+﻿namespace SOLID_HelloWorld.Formatting.TextPostfixing
 {
     internal class StringInterpolationPostFixer : ITextPostFixer
     {

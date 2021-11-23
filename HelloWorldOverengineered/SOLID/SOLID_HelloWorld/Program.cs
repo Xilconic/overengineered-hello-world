@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using SOLID_HelloWorld.Displaying;
 using SOLID_HelloWorld.Formatting;
+using SOLID_HelloWorld.Formatting.TextPostfixing;
 using SOLID_HelloWorld.Formatting.TextTokenization;
 using SOLID_HelloWorld.TextSourcing;
 using SOLID_HelloWorld.Utilities;
