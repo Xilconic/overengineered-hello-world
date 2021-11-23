@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SOLID_HelloWorld.Displaying;
 using SOLID_HelloWorld.Formatting;
 using SOLID_HelloWorld.Formatting.TextPostfixing;
@@ -24,9 +25,17 @@ namespace SOLID_HelloWorld
 
         static void Main(string[] args)
         {
-            string text = TextDeterminator.GetText();
-            string formattedText = TextFormatter.FormatText(text);
-            TextOutputter.OutputText(formattedText);
+            try
+            {
+                string text = TextDeterminator.GetText();
+                string formattedText = TextFormatter.FormatText(text);
+                TextOutputter.OutputText(formattedText);
+            }
+            catch (OutOfMemoryException e)
+            {
+                Console.WriteLine("An unpreventable error has occurred. We're terribly sorry about that. Please share the following error message with your maintainer:");
+                Console.WriteLine(e);
+            }
         }
     }
 }

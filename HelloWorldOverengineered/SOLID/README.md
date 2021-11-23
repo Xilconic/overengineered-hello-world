@@ -152,3 +152,16 @@ The project file is starting to grow and the structure is getting lost. Relation
 Organize the code in namespaces and folders according to their responsibilities.
 #### Consequences
 Code will be easier to navigate and cluster based on intent. If needed, makes it easier to extract separate dll for them.
+
+### 0012 - Improve contract for ITextPostFixer
+#### Status
+Implemented
+#### Context
+It's unclear how to implement `ITextPostFixer`. The available design space is too big, that for the caller of the interface the risk if missing an edge case is too high.
+#### Decision
+According to the Liskov Substitution Principle it's recommended to have clear design and statements of the contract:
+* Preconditions
+* Postconditions
+* Invariants
+#### Consequences
+This simplifies the responsibilities on the caller of `ITextPostFixer` and also makes it easier for developers to ensure implementing a good polymorphic implementation of the interface.

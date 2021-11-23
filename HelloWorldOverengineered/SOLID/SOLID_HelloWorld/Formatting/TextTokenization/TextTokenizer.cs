@@ -9,7 +9,10 @@
             _separator = separator;
         }
 
+        /// <inheritdoc cref="ITextSplitter"/>
         public string[] Tokenize(string text) => text.Split(_separator);
+        
+        /// <inheritdoc cref="ITokenCombinator"/>
         public string CombineTokens(string[] tokens) => string.Join(_separator, tokens);
     }
 }
