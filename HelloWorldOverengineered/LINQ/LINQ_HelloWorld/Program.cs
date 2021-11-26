@@ -13,6 +13,24 @@ namespace LINQ_HelloWorld
             }
         }
 
-        private static IEnumerable<char> GetText() => "Hello World!"+Environment.NewLine;
+        private static IEnumerable<char> GetText()
+        {
+            yield return 'H';
+            yield return 'e';
+            yield return 'l';
+            yield return 'l';
+            yield return 'o';
+            yield return ' ';
+            yield return 'W';
+            yield return 'o';
+            yield return 'r';
+            yield return 'l';
+            yield return 'd';
+            yield return '!';
+            foreach (char character in Environment.NewLine)
+            {
+                yield return character;
+            }
+        }
     }
 }

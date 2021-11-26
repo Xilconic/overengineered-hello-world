@@ -22,3 +22,13 @@ The application was using a hardcoded 'Console.WriteLine()'.
 As we're already looping over all characters of a piece of text, we should refactor to also capture the intended new-line in the text.
 #### Consequences
 Start to unleash the true power of LINQ.
+
+### 0003 - Remove string concatenation
+#### Status
+Implemented
+#### Context
+We were postfixing the `Environment.NewLine` text using string concatenation.
+#### Decision
+Remove string concatenation by refactoring the method using yield return statement, eliminating the need to do string concatenation.
+#### Consequences
+Eliminate needless string manipulation.
