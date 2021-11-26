@@ -11,4 +11,14 @@ The `string` type in C# is basically a collection of characters.
 #### Decision
 Loop over all characters in the text when displaying.
 #### Consequences
-Start to unleach the true power of LINQ.
+Start to unleash the true power of LINQ.
+
+### 0002 - Define method that returns all relevant characters to be printed
+#### Status
+Implemented
+#### Context
+The application was using a hardcoded 'Console.WriteLine()'.
+#### Decision
+As we're already looping over all characters of a piece of text, we should refactor to also capture the intended new-line in the text.
+#### Consequences
+Start to unleash the true power of LINQ.

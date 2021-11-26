@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LINQ_HelloWorld
 {
@@ -6,11 +7,12 @@ namespace LINQ_HelloWorld
     {
         static void Main(string[] args)
         {
-            foreach(char character in "Hello World!")
+            foreach(char character in GetText())
             {
                 Console.Write(character);
             }
-            Console.WriteLine();
         }
+
+        private static IEnumerable<char> GetText() => "Hello World!"+Environment.NewLine;
     }
 }
