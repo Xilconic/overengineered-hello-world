@@ -32,3 +32,23 @@ We were postfixing the `Environment.NewLine` text using string concatenation.
 Remove string concatenation by refactoring the method using yield return statement, eliminating the need to do string concatenation.
 #### Consequences
 Eliminate needless string manipulation.
+
+### 0004 - Remove duplicated characters
+#### Status
+Implemented
+#### Context
+The text was containing duplicate characters.
+#### Decision
+Define the alphabet as `IEnumerable<char>` to never needing to have duplicate characters ever again!
+#### Consequences
+Eliminate needless duplication of characters.
+
+### 0005 - Depend on industry standards
+#### Status
+Implemented
+#### Context
+Unicode UTF-16 is a worldwide standard accepted character set. Making use of that is better for long term stability compared to hardcoding characters ourselves.
+#### Decision
+Define the Unicode UTF-16 character set as a method. Keep the facades methods `GetAlphabet()` and `GetAlphabetUpper()` for readability.
+#### Consequences
+Standardization of our code. Also the code patterns are more clearer this way.
