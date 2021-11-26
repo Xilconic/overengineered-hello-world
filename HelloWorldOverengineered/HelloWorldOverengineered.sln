@@ -9,6 +9,13 @@ EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_HelloWorld", "SOLID\SOLID_HelloWorld\SOLID_HelloWorld.csproj", "{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{A80779E8-B928-42B9-85C8-EDAE6AC3E8BB}"
+ProjectSection(SolutionItems) = preProject
+	LINQ\README.md = LINQ\README.md
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_HelloWorld", "LINQ\LINQ_HelloWorld\LINQ_HelloWorld.csproj", "{2294277B-C7B4-4161-9A91-ABC0784A7757}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +30,13 @@ Global
 		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC} = {96C5F47A-C942-4ED8-92FF-29412D4B52E9}
+		{2294277B-C7B4-4161-9A91-ABC0784A7757} = {A80779E8-B928-42B9-85C8-EDAE6AC3E8BB}
 	EndGlobalSection
 EndGlobal
