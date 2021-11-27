@@ -16,29 +16,45 @@ namespace LINQ_HelloWorld
 
         private static IEnumerable<char> GetText()
         {
-            yield return GetAlphabetUpper().ElementAt(7);
-            yield return GetAlphabet().ElementAt(4);
-            yield return GetAlphabet().ElementAt(11);
-            yield return GetAlphabet().ElementAt(11);
-            yield return GetAlphabet().ElementAt(14);
+            var word1 = new[] { 7, 4, 11, 11, 14 };
+            foreach (char character in word1.GetWordFromIndices())
+            {
+                yield return character;
+            }
             
-            yield return GetUnicodeUtf16().ElementAt(32);
+            yield return CharacterSets.GetUnicodeUtf16().ElementAt(32);
             
-            yield return GetAlphabetUpper().ElementAt(22);
-            yield return GetAlphabet().ElementAt(14);
-            yield return GetAlphabet().ElementAt(17);
-            yield return GetAlphabet().ElementAt(11);
-            yield return GetAlphabet().ElementAt(3);
+            var word2 = new[] { 22, 14, 17, 11, 3 };
+            foreach (char character in word2.GetWordFromIndices())
+            {
+                yield return character;
+            }
             
-            yield return GetUnicodeUtf16().ElementAt(33);
+            yield return CharacterSets.GetUnicodeUtf16().ElementAt(33);
             foreach (char character in Environment.NewLine)
             {
                 yield return character;
             }
         }
-
-        private static IEnumerable<char> GetUnicodeUtf16() => Enumerable.Range(char.MinValue, char.MaxValue).Select(number => (char)number);
-        private static IEnumerable<char> GetAlphabet() => GetUnicodeUtf16().Skip(97).Take(24);
-        private static IEnumerable<char> GetAlphabetUpper() => GetUnicodeUtf16().Skip(65).Take(24);
+    }
+    
+    internal static class CharacterSets
+    {
+        public static IEnumerable<char> GetUnicodeUtf16() => Enumerable.Range(char.MinValue, char.MaxValue).Select(number => (char)number);
+        public static IEnumerable<char> GetAlphabet() => GetUnicodeUtf16().Skip(97).Take(24);
+        public static IEnumerable<char> GetAlphabetUpper() => GetUnicodeUtf16().Skip(65).Take(24);
+    }
+    
+    internal static class SentenceBasedExtensionMethods
+    {
+        public static IEnumerable<char> GetWordFromIndices(this IEnumerable<int> alphabetIndices)
+        {
+            return alphabetIndices
+                .Select((letterIndex, sequenceIndex) => 
+                    sequenceIndex == 0 ? 
+                        CharacterSets.GetAlphabetUpper().ElementAt(letterIndex) :
+                        CharacterSets.GetAlphabet().ElementAt(letterIndex)
+                );
+        }
     }
 }

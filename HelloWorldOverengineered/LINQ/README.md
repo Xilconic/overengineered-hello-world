@@ -52,3 +52,13 @@ Unicode UTF-16 is a worldwide standard accepted character set. Making use of tha
 Define the Unicode UTF-16 character set as a method. Keep the facades methods `GetAlphabet()` and `GetAlphabetUpper()` for readability.
 #### Consequences
 Standardization of our code. Also the code patterns are more clearer this way.
+
+### 0006 - Extract processing pattern for words
+#### Status
+Implemented
+#### Context
+We discovered that all words are following the same pattern!
+#### Decision
+Extract the pattern into a reusable extension method.
+#### Consequences
+Less code duplication and more expressive DSL.
