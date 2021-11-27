@@ -62,3 +62,28 @@ We discovered that all words are following the same pattern!
 Extract the pattern into a reusable extension method.
 #### Consequences
 Less code duplication and more expressive DSL.
+
+### 0007 - Implement iterator for sentences
+#### Status
+Implemented
+#### Context
+Sentences are basically a sequence of words. And words are basically sequences of characters. And characters are basically sequences of indices into a character table.
+Therefore sentences are sequences of sequences of characters.
+Also LINQ's `Aggregate` extension method cannot be used to capture this behavior, because `Aggregate` is implemented to immediately evaluate the sequence, losing out on the ultimate power of lazy evaluation offered by LINQ.
+Also `Aggregate` cannot be used smartly enough to insert whitespaces between words but not at the end!
+#### Decision
+To optimally process sequences of sequences, where Aggregate isn't smart enough for our usecase, we need to implement our own iterator.
+#### Consequences
+Eliminates a couple of foreach statements which, allowing for better lazily evaluation of our intended text.
+
+### 0007 - Implement iterator for characters
+#### Status
+Implemented
+#### Context
+Sentences are basically a sequence of words. And words are basically sequences of characters. And characters are basically sequences of indices into a character table.
+Therefore characters are lookup sequences.
+Current usage of LINQ `ElementAt` doesn't do lazy evaluation.
+#### Decision
+Define an iterator for the concept of a character, so we can maximize lazy evaluation of our data.
+#### Consequences
+More lazy evaluation of our data.
