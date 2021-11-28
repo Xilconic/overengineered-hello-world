@@ -87,3 +87,13 @@ Current usage of LINQ `ElementAt` doesn't do lazy evaluation.
 Define an iterator for the concept of a character, so we can maximize lazy evaluation of our data.
 #### Consequences
 More lazy evaluation of our data.
+
+### 0007 - Further optimize lazy loading of data
+#### Status
+Implemented
+#### Context
+We have hardcoded arrays in our code, which can also benefit from lazy loading.
+#### Decision
+Define lazy evaluative alternatives for the hardcoded arrays.
+#### Consequences
+More lazy evaluation of our data. Perfection achieved!

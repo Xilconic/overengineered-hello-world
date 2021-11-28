@@ -15,19 +15,34 @@ namespace LINQ_HelloWorld
             }
         }
 
-        private static IEnumerable<char> GetText()
-        {
-            var word1 = new[] { 7, 4, 11, 11, 14 };
-            var word2 = new[] { 22, 14, 17, 11, 3 };
-            var sentence = new[]
-            {
-                word1,
-                word2
-            };
-
-            return sentence.GetSentenceFromIndices()
+        private static IEnumerable<char> GetText() =>
+            GetWords()
+                .GetSentenceFromIndices()
                 .Concat(CharacterSets.GetUnicodeUtf16().LazyGetElementAt(33))
                 .Concat(Environment.NewLine);
+
+        private static IEnumerable<IEnumerable<int>> GetWords()
+        {
+            yield return GetWordOneIndices();
+            yield return GetWordTwoIndices();
+        }
+
+        private static IEnumerable<int> GetWordOneIndices()
+        {
+            yield return 7;
+            yield return 4;
+            yield return 11;
+            yield return 11;
+            yield return 14;
+        }
+        
+        private static IEnumerable<int> GetWordTwoIndices()
+        {
+            yield return 22;
+            yield return 14;
+            yield return 17;
+            yield return 11;
+            yield return 3;
         }
     }
     
