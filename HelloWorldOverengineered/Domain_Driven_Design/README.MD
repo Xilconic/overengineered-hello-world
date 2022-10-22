@@ -39,3 +39,15 @@ Especially if they never need to deal with those details themselves.
 Introduce an Anti Corruption Layer towards the Linguistics Bounded Context.
 #### Consequences
 People familiar to Hello World applications can inspect the Program.cs and find it doesn't look very suprising to them.
+
+### 0004 - Introduce Anti Corruption Layer towards Display Bounded Context
+#### Status
+Implemented
+#### Context
+People who start implementing their very first Hello World application probably are used to only seeing a couple of lines of code in order to make the application write the text 'Hello World!' to console output.
+They may not be used to the ubiquitous language of the Display world and probably get confused by it.
+Especially if they never need to deal with those details themselves.
+#### Decision
+Introduce an Anti Corruption Layer towards the Display Bounded Context.
+#### Consequences
+People familiar to Hello World applications can inspect the Program.cs and find it doesn't look very suprising to them.
