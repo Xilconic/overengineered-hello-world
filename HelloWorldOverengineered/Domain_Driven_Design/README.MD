@@ -5,3 +5,15 @@ Typically multiple problem domains are interacting with each other in order to a
 These might have their own language, where a Bounded Context can be identified where a ubiquitous language applies for a certain set of problems.
 
 ## Architectural Design Decisions
+
+### 0001 - Define Bounded Contexts as separate projects
+#### Status
+Implemented
+#### Context
+A 'Hello World' program consists out of 2 problem domains:
+1. Linguistics
+2. Display
+#### Decision
+Separate out the relevant Bounded Contexts for the application.
+#### Consequences
+Start of more clear deliniation of problem domains and their separate responsibilities and ubiquitous languages.

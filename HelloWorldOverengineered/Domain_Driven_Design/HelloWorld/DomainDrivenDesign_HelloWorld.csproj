@@ -6,4 +6,9 @@
         <RootNamespace>Domain_Driven_Design_HelloWorld</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BoundedContexts\Display\Display.csproj" />
+      <ProjectReference Include="..\BoundedContexts\Linguistics\Linguistics.csproj" />
+    </ItemGroup>
+
 </Project>
