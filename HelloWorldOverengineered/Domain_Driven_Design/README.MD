@@ -27,3 +27,15 @@ In linguistics, we talk about sentences instead of 'string'.
 Refactor code by introducing classes that map to the ubiquitous language of Linguistics.
 #### Consequences
 Less confusion when talking about the code with linguistic experts.
+
+### 0003 - Introduce Anti Corruption Layer towards Linguistics Bounded Context
+#### Status
+Implemented
+#### Context
+People who start implementing their very first Hello World application probably are used to only seeing a couple of lines of code in order to make the application write the text 'Hello World!' to console output.
+They may not be used to the ubiquitous language of the Linguistics world and probably get confused by it.
+Especially if they never need to deal with those details themselves.
+#### Decision
+Introduce an Anti Corruption Layer towards the Linguistics Bounded Context.
+#### Consequences
+People familiar to Hello World applications can inspect the Program.cs and find it doesn't look very suprising to them.

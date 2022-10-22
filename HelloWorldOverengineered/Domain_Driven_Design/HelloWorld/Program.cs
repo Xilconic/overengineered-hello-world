@@ -1,5 +1,5 @@
 ﻿using Display;
-using Linguistics;
+using Domain_Driven_Design_HelloWorld.AntiCorruptionLayers.Linguistics;
 
 namespace Domain_Driven_Design_HelloWorld
 {
@@ -7,10 +7,8 @@ namespace Domain_Driven_Design_HelloWorld
     {
         static void Main(string[] args)
         {
-            Sentence sentence = Sentences.HelloWorld;
-
             var display = new VisualDisplay();
-            display.Visualize(sentence.ToString());
+            display.Visualize(Text.HelloWorld);
         }
     }
 }
