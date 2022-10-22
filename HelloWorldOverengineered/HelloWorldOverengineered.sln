@@ -1,20 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateHelloWorld", "TemplateHelloWorld\TemplateHelloWorld.csproj", "{8BE00DA4-1618-4DDF-A649-3A855F664BAC}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateHelloWorld", "TemplateHelloWorld\TemplateHelloWorld.csproj", "{8BE00DA4-1618-4DDF-A649-3A855F664BAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{96C5F47A-C942-4ED8-92FF-29412D4B52E9}"
-ProjectSection(SolutionItems) = preProject
-	SOLID\README.md = SOLID\README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		SOLID\README.md = SOLID\README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID_HelloWorld", "SOLID\SOLID_HelloWorld\SOLID_HelloWorld.csproj", "{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID_HelloWorld", "SOLID\SOLID_HelloWorld\SOLID_HelloWorld.csproj", "{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{A80779E8-B928-42B9-85C8-EDAE6AC3E8BB}"
-ProjectSection(SolutionItems) = preProject
-	LINQ\README.md = LINQ\README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		LINQ\README.md = LINQ\README.md
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ_HelloWorld", "LINQ\LINQ_HelloWorld\LINQ_HelloWorld.csproj", "{2294277B-C7B4-4161-9A91-ABC0784A7757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ_HelloWorld", "LINQ\LINQ_HelloWorld\LINQ_HelloWorld.csproj", "{2294277B-C7B4-4161-9A91-ABC0784A7757}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Driven Design", "Domain Driven Design", "{8F29DE00-E22F-4DD8-BB45-60127A68B480}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainDrivenDesign", "Domain_Driven_Design\DomainDrivenDesign.csproj", "{7D148259-C590-4B39-BBCB-7BACE1A1F0ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,9 +41,20 @@ Global
 		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2294277B-C7B4-4161-9A91-ABC0784A7757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D148259-C590-4B39-BBCB-7BACE1A1F0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D148259-C590-4B39-BBCB-7BACE1A1F0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D148259-C590-4B39-BBCB-7BACE1A1F0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D148259-C590-4B39-BBCB-7BACE1A1F0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B9864DA-36BD-4A0F-B1C3-7A19E089FEEC} = {96C5F47A-C942-4ED8-92FF-29412D4B52E9}
 		{2294277B-C7B4-4161-9A91-ABC0784A7757} = {A80779E8-B928-42B9-85C8-EDAE6AC3E8BB}
+		{7D148259-C590-4B39-BBCB-7BACE1A1F0ED} = {8F29DE00-E22F-4DD8-BB45-60127A68B480}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABB9345A-87C1-406B-BED7-1E203A34106F}
 	EndGlobalSection
 EndGlobal
