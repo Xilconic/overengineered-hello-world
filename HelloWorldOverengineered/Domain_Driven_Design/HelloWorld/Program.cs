@@ -7,10 +7,10 @@ namespace Domain_Driven_Design_HelloWorld
     {
         static void Main(string[] args)
         {
-            string sentence = Sentences.HelloWorld;
+            Sentence sentence = Sentences.HelloWorld;
 
             var display = new VisualDisplay();
-            display.Visualize(sentence);
+            display.Visualize(sentence.ToString());
         }
     }
 }

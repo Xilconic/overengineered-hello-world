@@ -2,6 +2,6 @@
 {
     public class Sentences
     {
-        public const string HelloWorld = "Hello World!";
+        public static Sentence HelloWorld { get; } = new("Hello World!");
     }
 }

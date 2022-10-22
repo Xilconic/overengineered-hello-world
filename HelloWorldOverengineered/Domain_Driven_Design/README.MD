@@ -17,3 +17,13 @@ A 'Hello World' program consists out of 2 problem domains:
 Separate out the relevant Bounded Contexts for the application.
 #### Consequences
 Start of more clear deliniation of problem domains and their separate responsibilities and ubiquitous languages.
+
+### 0002 - Introduce 'Sentence' concept
+#### Status
+Implemented
+#### Context
+In linguistics, we talk about sentences instead of 'string'.
+#### Decision
+Refactor code by introducing classes that map to the ubiquitous language of Linguistics.
+#### Consequences
+Less confusion when talking about the code with linguistic experts.
