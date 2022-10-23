@@ -71,3 +71,13 @@ In English linguistics, a sentence can have various 'expression types': statemen
 Implement these linguistic restrictions into the construction logic of minor sentences.
 #### Consequences
 Less risk on invalid MinorSentence instances.
+
+### 0007 - Implement domain restrictions for greetings-based minor sentences
+#### Status
+Implemented
+#### Context
+In English linguistics, greetings are a form of minor sentences and have particular restrictions applied to them.
+#### Decision
+Implement these linguistic restrictions into the construction logic of minor sentences.
+#### Consequences
+Less risk on invalid MinorSentence instances.

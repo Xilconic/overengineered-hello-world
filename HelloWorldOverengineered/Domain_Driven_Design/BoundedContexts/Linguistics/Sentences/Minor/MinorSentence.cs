@@ -13,10 +13,16 @@
     {
         private readonly string _text;
 
-        public MinorSentence(string text)
+        private MinorSentence(string text)
         {
             _text = text;
         }
+
+        public static MinorSentence AsGreeting() =>
+            new("Hello.");
+
+        public static MinorSentence AsGreeting(Subject subject) =>
+            new($"Hello, {subject}.");
 
         public override Sentence AsCommand()
         {
