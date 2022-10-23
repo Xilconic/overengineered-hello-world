@@ -51,3 +51,13 @@ Especially if they never need to deal with those details themselves.
 Introduce an Anti Corruption Layer towards the Display Bounded Context.
 #### Consequences
 People familiar to Hello World applications can inspect the Program.cs and find it doesn't look very suprising to them.
+
+### 0005 - Introduce 'minor sentence' and 'major sentence' concepts
+#### Status
+Implemented
+#### Context
+In English linguistics, a sentence is either a 'major sentence' or a 'minor sentence'. A major sentence is defined as consisting out of at least 1 clause, while a minor sentence does not.
+#### Decision
+Use polymorphism to capture these 2 categorial behavioral rules for sentenes. To keep the scope small for now, only support constructing major sentences out of a single clause.
+#### Consequences
+Less confusion when talking about the code with linguistic experts.

@@ -1,4 +1,4 @@
-﻿using Linguistics;
+﻿using Linguistics.Sentences;
 
 namespace Domain_Driven_Design_HelloWorld.AntiCorruptionLayers.Linguistics
 {
@@ -6,7 +6,7 @@ namespace Domain_Driven_Design_HelloWorld.AntiCorruptionLayers.Linguistics
     {
         static Text()
         {
-            Sentence sentence = Sentences.HelloWorld;
+            Sentence sentence = WellKnownSentences.HelloWorld;
 
             HelloWorld = sentence.ToString();
         }
