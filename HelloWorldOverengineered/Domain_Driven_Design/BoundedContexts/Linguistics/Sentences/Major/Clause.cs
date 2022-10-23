@@ -20,5 +20,38 @@
         {
             return _clauseText;
         }
+
+        public Clause AsCommand()
+        {
+            var newClause = ReplaceLastCharacterOfStringWith(_clauseText, '!');
+            return new Clause(newClause);
+        }
+
+        public Clause AsExclamation()
+        {
+            var newClause = ReplaceLastCharacterOfStringWith(_clauseText, '!');
+            return new Clause(newClause);
+        }
+
+        public Clause AsQuestion()
+        {
+            var newClause = ReplaceLastCharacterOfStringWith(_clauseText, '?');
+            return new Clause(newClause);
+        }
+
+        public Clause AsStatement()
+        {
+            var newClause = ReplaceLastCharacterOfStringWith(_clauseText, '.');
+            return new Clause(newClause);
+        }
+
+        public Clause AsSuggestion()
+        {
+            var newClause = ReplaceLastCharacterOfStringWith(_clauseText, '.');
+            return new Clause(newClause);
+        }
+
+        private static string ReplaceLastCharacterOfStringWith(string source, char replacementCharacter) =>
+            source[0..^1] + replacementCharacter;
     }
 }

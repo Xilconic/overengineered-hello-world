@@ -61,3 +61,13 @@ In English linguistics, a sentence is either a 'major sentence' or a 'minor sent
 Use polymorphism to capture these 2 categorial behavioral rules for sentenes. To keep the scope small for now, only support constructing major sentences out of a single clause.
 #### Consequences
 Less confusion when talking about the code with linguistic experts.
+
+### 0006 - Allow for sentence expression types
+#### Status
+Implemented
+#### Context
+In English linguistics, a sentence can have various 'expression types': statement, exclamation, command, question, request or suggestion.
+#### Decision
+Implement these linguistic restrictions into the construction logic of minor sentences.
+#### Consequences
+Less risk on invalid MinorSentence instances.

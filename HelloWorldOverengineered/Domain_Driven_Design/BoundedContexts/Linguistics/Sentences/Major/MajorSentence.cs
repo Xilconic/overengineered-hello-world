@@ -21,6 +21,31 @@
             _clause = clause;
         }
 
+        public override Sentence AsCommand()
+        {
+            return new MajorSentence(_clause.AsCommand());
+        }
+
+        public override Sentence AsExclamation()
+        {
+            return new MajorSentence(_clause.AsExclamation());
+        }
+
+        public override Sentence AsQuestion()
+        {
+            return new MajorSentence(_clause.AsQuestion());
+        }
+
+        public override Sentence AsStatement()
+        {
+            return new MajorSentence(_clause.AsStatement());
+        }
+
+        public override Sentence AsSuggestion()
+        {
+            return new MajorSentence(_clause.AsSuggestion());
+        }
+
         protected override string GetStringRepresentation()
         {
             return _clause.ToString();

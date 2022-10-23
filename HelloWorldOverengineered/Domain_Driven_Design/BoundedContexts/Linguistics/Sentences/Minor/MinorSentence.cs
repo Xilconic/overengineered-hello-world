@@ -18,9 +18,42 @@
             _text = text;
         }
 
+        public override Sentence AsCommand()
+        {
+            var newMinorSentenceText = ReplaceLastCharacterOfStringWith(_text, '!');
+            return new MinorSentence(newMinorSentenceText);
+        }
+
+        public override Sentence AsExclamation()
+        {
+            var newMinorSentenceText = ReplaceLastCharacterOfStringWith(_text, '!');
+            return new MinorSentence(newMinorSentenceText);
+        }
+
+        public override Sentence AsQuestion()
+        {
+            var newMinorSentenceText = ReplaceLastCharacterOfStringWith(_text, '?');
+            return new MinorSentence(newMinorSentenceText);
+        }
+
+        public override Sentence AsStatement()
+        {
+            var newMinorSentenceText = ReplaceLastCharacterOfStringWith(_text, '.');
+            return new MinorSentence(newMinorSentenceText);
+        }
+
+        public override Sentence AsSuggestion()
+        {
+            var newMinorSentenceText = ReplaceLastCharacterOfStringWith(_text, '.');
+            return new MinorSentence(newMinorSentenceText);
+        }
+
         protected override string GetStringRepresentation()
         {
             return _text;
         }
+
+        private static string ReplaceLastCharacterOfStringWith(string source, char replacementCharacter) =>
+            source[0..^1] + replacementCharacter;
     }
 }

@@ -8,5 +8,11 @@
         {
             return GetStringRepresentation();
         }
+
+        public abstract Sentence AsStatement();
+        public abstract Sentence AsExclamation();
+        public abstract Sentence AsQuestion();
+        public abstract Sentence AsCommand();
+        public abstract Sentence AsSuggestion();
     }
 }
